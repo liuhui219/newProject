@@ -1,0 +1,81 @@
+/** @format */
+:root {
+    --slider-width: 288px;
+    --main-width: 320px;
+    --slider-padding: 16px;
+    --container-width: 1280px;
+    --header-height: 80px;
+    --nav-height: 80px;
+    --nav-z-index: 12;
+    --border-radius: 4px;
+    --foot-bg: #1b252f;
+    --mobile-header-height: 60px;
+    --maxWidth: 500px;
+    --background: linear-gradient(90deg, #63cd7b 0%, #33a94d 100%);
+    --scrollLeft: -300px;
+    --app-download-height: 40px;
+    --bg-background: #25262b;
+}
+
+body,
+html {
+    overscroll-behavior-y: none;
+    touch-action: pan-y;
+    overflow: hidden;
+}
+body,
+html,
+#root-p {
+    width: 100%;
+    height: 100%;
+    background-color: var(--el-bg-color);
+    text-rendering: optimizeLegibility;
+}
+
+.mobile-el-overlay {
+    height: calc(100% - 60px) !important;
+    z-index: 300 !important;
+    max-width: var(--maxWidth);
+    transform: translateX(-50%);
+    left: 50% !important;
+    width: 100%;
+    .el-drawer__body {
+        padding: 0;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    display: none;
+}
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background-color: #0000004d;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(92, 87, 87, 0.644);
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.btn-main-text span {
+    font-weight: 600;
+}
+
+.el-button.is-disabled {
+    cursor: default !important;
+}
+
+.animate__animated {
+    animation-duration: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate__jello {
+    animation-name: jello;
+    transform-origin: center;
+}
