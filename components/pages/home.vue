@@ -11,7 +11,7 @@
                 </div>
                 <div class="w-[16%] absolute right-[18%] bottom-0">
                     <div class="header-coint bg-cover w-full relative" :style="{backgroundImage: `url(${cointBg})`}">
-                        <div class="white font-black">1234</div>
+                        <div class="white font-black text-[1rem]">1234</div>
                     </div>
                 </div>
                 <div class="close absolute bottom-0 h-full right-[30px]">
