@@ -28,7 +28,7 @@
                 <div class="absolute w-[60%] top-0 h-full flex justify-center items-center right-[10%]">
                     <div class="flex flex-row w-full gap-[5%]">
                         <div
-                            class="header-chang1_bg w-[34%] bg-cover w-full relative"
+                            class="header-chang1_bg w-[34%] bg-cover relative"
                             :style="{backgroundImage: `url(${chang1_bg})`}"
                         >
                             <div class="absolute top-[7%] left-[5%] w-[40%]">
@@ -43,17 +43,37 @@
                                 <div class="cont-title absolute top-[6%] left-[16%]">Primary</div>
                                 <div class="w-full h-full flex flex-col justify-center items-center gap-[5%] pt-[18%]">
                                     <div
-                                        class="tp_xuanchang_xxd2_bg w-[80%] bg-cover w-full relative"
+                                        class="tp_xuanchang_xxd2_bg w-[80%] bg-cover relative"
                                         :style="{backgroundImage: `url(${tp_xuanchang_xxd2_bg})`}"
-                                    ></div>
+                                    >
+                                        <div class="w-full flex flex-row">
+                                            <span class="px-[15px]">Boot:</span>
+                                            <span class="flex-1 flex justify-center items-center">1231</span>
+                                        </div>
+                                    </div>
                                     <div
-                                        class="tp_xuanchang_xxd2_bg w-[80%] bg-cover w-full relative"
+                                        class="tp_xuanchang_xxd2_bg w-[80%] bg-cover relative"
                                         :style="{backgroundImage: `url(${tp_xuanchang_xxd2_bg})`}"
-                                    ></div>
+                                    >
+                                        <div class="w-full flex flex-row">
+                                            <span class="px-[15px]">Boot:</span>
+                                            <span class="flex-1 flex justify-center items-center">1231</span>
+                                        </div>
+                                    </div>
                                     <div
-                                        class="tp_xuanchang_join_btn w-[80%] bg-cover w-full relative"
+                                        class="tp_xuanchang_join_btn w-[80%] bg-cover relative"
                                         :style="{backgroundImage: `url(${tp_xuanchang_join_btn})`}"
-                                    ></div>
+                                    >
+                                        <div class="w-full flex flex-row justify-center items-center gap-[5px]">
+                                            <base-img
+                                                class="w-[10%]"
+                                                name="tp_xuanchang_jiantou_icon"
+                                                type="png"
+                                                path="images"
+                                            />
+                                            <span class="font-black join-text">JOIN</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div
@@ -98,7 +118,13 @@
     const closeFn = () => {
         window.location.replace("lua://Close.api.command");
     };
-    onMounted(() => {});
+    const resizeFn = () => {
+        document.getElementsByTagName("html")[0].style.fontSize = (window.innerWidth / 750) * 10 + "px";
+    };
+    onMounted(() => {
+        document.getElementsByTagName("html")[0].style.fontSize = (window.innerWidth / 750) * 10 + "px";
+        window.addEventListener("resize", resizeFn);
+    });
 </script>
 
 <style lang="scss" scoped>
@@ -172,6 +198,9 @@
                 justify-content: center;
                 align-items: center;
                 aspect-ratio: 4.7 / 1;
+            }
+            .join-text {
+                text-shadow: 2px 2px #ba7e40, -2px -2px #ba7e40;
             }
         }
         button {
